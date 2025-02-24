@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingHorizontal="25dp"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbarThumbVertical="@color/purple_500">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintRootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="80dp"
+        >
+
+        <TextView
+            android:id="@+id/constraintHeadingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/formText"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/constraintFullNameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:autofillHints="name"
+            android:hint="@string/full_name_hint"
+            android:inputType="text"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/green"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintHeadingText"
+            app:layout_constraintWidth_percent="0.9"
+            />
+
+        <LinearLayout
+            android:id="@+id/constraintButtonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintFullNameInput"
+            >
+
+            <Button
+                android:id="@+id/constraintAboutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_200"
+                android:stateListAnimator="@null"
+                android:text="@string/about"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/helloSubmitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:stateListAnimator="@null"
+                android:text="@string/btn2"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/constraintSportLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/sportText"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintButtonContainer"
+            />
+
+        <LinearLayout
+            android:id="@+id/constraintCheckBoxContainerTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/constraintSportLabel"
+            >
+
+            <CheckBox
+                android:id="@+id/constraintCheckBoxBootball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/purple_500"
+                android:text="@string/football"
+                />
+
+            <CheckBox
+                android:id="@+id/constraintCheckBoxVolleyball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/purple_500"
+                android:text="@string/volleyball"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/constraintCheckBoxContainerSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/constraintCheckBoxContainerTop"
+            >
+
+            <CheckBox
+                android:id="@+id/constraintCheckBoxbasketBall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/purple_500"
+                android:text="@string/basketball"
+                />
+
+            <CheckBox
+                android:id="@+id/constraintCheckBoxBatmintion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/purple_500"
+                android:text="@string/batmintion"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/constraintGenderLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/genderText"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintCheckBoxContainerSecond"
+            />
+
+        <RadioGroup
+            android:id="@+id/constraintCheckBoxGenderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/constraintGenderLabel"
+            >
+
+            <RadioButton
+                android:id="@+id/constraintRadioMale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/purple_500"
+                android:text="@string/maleText"
+                />
+
+            <RadioButton
+                android:id="@+id/constraintRadioFemale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/purple_500"
+                android:text="@string/female"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/constraintCountryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/CountryText"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintCheckBoxGenderContainer"
+            />
+
+        <Spinner
+            android:id="@+id/constraintCountrySpinner"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/black"
+            android:entries="@array/country_list"
+            android:hapticFeedbackEnabled="true"
+            android:spinnerMode="dropdown"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintCountryLabel"
+            app:layout_constraintWidth_percent="0.6"
+            />
+
+        <ImageView
+            android:id="@+id/constraintImage"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/image1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/butterfly"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintCountrySpinner"
+            />
+
+        <LinearLayout
+            android:id="@+id/constraintCountryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/constraintGenderLabel"
+            >
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

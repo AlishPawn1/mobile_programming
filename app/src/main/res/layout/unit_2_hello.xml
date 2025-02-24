@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_200"
-    android:paddingVertical="40dp"
+    android:orientation="vertical"
     android:paddingHorizontal="20dp"
-    android:weightSum="5"
-    >
+    android:paddingVertical="40dp"
+    android:weightSum="5">
 
     <TextView
+        android:id="@+id/helloHeadingText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contact"
+        android:text="@string/contact"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp" />
 
     <EditText
+        android:id="@+id/helloFullNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="20dp"
         android:autofillHints="name"
-        android:hint="your name"
+        android:hint="@string/txtfield"
         android:inputType="text"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/black"
-        android:textSize="22sp"
-        />
+        android:textSize="22sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,26 +40,27 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/helloCancelBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/teal_200"
             android:stateListAnimator="@null"
-            android:text="Cancel"
-            android:textColor="@color/white"
+            android:text="@string/btn1"
             android:textAllCaps="false"
-            />
+            android:textColor="@color/white" />
 
         <Space
             android:layout_width="5dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
         <Button
+            android:id="@+id/helloSubmitBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
             android:stateListAnimator="@null"
-            android:text="Submit"
-            android:textColor="@color/white"/>
+            android:text="@string/btn2"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
