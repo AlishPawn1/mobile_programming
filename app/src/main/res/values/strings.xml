@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">mobile_programming</string>
     <string name="contact">Contact: </string>
-    <string name="txtfield">Enter your name</string>
+    <string name="yourName">Enter your name</string>
+    <string name="yourEmail">Enter your email</string>
+    <string name="yourPhone">Enter your phone</string>
+    <string name="yourPassword">Enter your password</string>
     <string name="btn1">Cancel</string>
     <string name="btn2">Submit</string>
     <string name="na">Text field is empty</string>
