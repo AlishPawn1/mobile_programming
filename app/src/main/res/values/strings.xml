@@ -28,7 +28,8 @@
     <string name="female">Female</string>
     <string name="image1">Image text</string>
     <string name="about">About</string>
-    <string name="signInText">Sign in</string>
+    <string name="signInText">Sign In</string>
+    <string name="signUpText">Sign Up</string>
 
     <string-array name="country_list">
         <item>Nepal</item>
