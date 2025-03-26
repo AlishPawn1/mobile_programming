@@ -37,7 +37,7 @@
     <string name="sports">Sports</string>
     <string name="go_back">GO back</string>
     <string name="dialog">Dialog</string>
-    <string name="name">Name</string>
+        <string name="name">Name</string>
 
     <string-array name="country_list">
         <item>Nepal</item>
