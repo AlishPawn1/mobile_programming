@@ -11,15 +11,22 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_4.About;
+import com.bca.mobile_programming.unit_4.Contact;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class SignUp extends Activity {
+public class SignUp extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle b) {
@@ -31,11 +38,28 @@ public class SignUp extends Activity {
         EditText fullNameInput = findViewById(R.id.signupNameInput);
         RadioGroup genderGroup = findViewById(R.id.constraintCheckBoxGenderContainer);
         Spinner countrySpinner = findViewById(R.id.constraintCountrySpinner);
+        TextView signupHeadingText = findViewById(R.id.signupText);
+        TextView signupNoAccountText = findViewById(R.id.signupNoAccountText);
 
         CheckBox footballCheckBox = findViewById(R.id.constraintCheckBoxBootball);
         CheckBox volleyballCheckBox = findViewById(R.id.constraintCheckBoxVolleyball);
         CheckBox basketballCheckBox = findViewById(R.id.constraintCheckBoxbasketBall);
         CheckBox BatmintionCheckBox = findViewById(R.id.constraintCheckBoxBatmintion);
+
+//        to get data back from the destination activity should extend AppCompactActivity
+
+        ActivityResultLauncher<Intent> contactLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(), result ->{
+                    if (result.getResultCode() == Activity.RESULT_OK){
+                        Intent data = result.getData();
+
+                        if(data != null){
+                            String message = data.getStringExtra("contactData");
+                            signupHeadingText.setText(message);
+                        }
+                    }
+                }
+        );
 
         Resources res = getResources();
 
@@ -87,6 +111,15 @@ public class SignUp extends Activity {
             i.putStringArrayListExtra("sports", selectedSports);
 
             startActivity(i);
+        });
+
+        aboutButton.setOnClickListener(v -> {
+            Intent i = new Intent(SignUp.this, Contact.class);
+            contactLauncher.launch(i);
+        });
+
+        signupNoAccountText.setOnClickListener(v -> {
+            finish();
         });
     }
 

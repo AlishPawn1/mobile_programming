@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@color/white"
     android:orientation="vertical"
     android:paddingHorizontal="20dp"
     android:paddingVertical="40dp"
@@ -28,7 +28,7 @@
         android:inputType="text"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="22sp" />
 
@@ -40,7 +40,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/helloCancelBtn"
+            android:id="@+id/unit2helloCancelBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/teal_200"
@@ -54,7 +54,7 @@
             android:layout_height="match_parent" />
 
         <Button
-            android:id="@+id/helloSubmitBtn"
+            android:id="@+id/unit2helloSubmitBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"

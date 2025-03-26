@@ -74,7 +74,7 @@
                 android:layout_height="match_parent" />
 
             <Button
-                android:id="@+id/helloSubmitBtn"
+                android:id="@+id/constraintSubmitBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
