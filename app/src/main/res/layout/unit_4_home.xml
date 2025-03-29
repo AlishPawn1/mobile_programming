@@ -88,7 +88,7 @@
             app:layout_constraintTop_toBottomOf="@id/homeButtonContainer">
 
             <Button
-                android:id="@+id/homeFragmentButton"
+                android:id="@+id/homeFragmentButtonImage"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
@@ -116,7 +116,7 @@
                 android:layout_height="match_parent" />
 
             <Button
-                android:id="@+id/homeSwitchButton"
+                android:id="@+id/homeFragmentButtonSwitcher"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"

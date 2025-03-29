@@ -4,34 +4,33 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    android:paddingHorizontal="20dp"
-    android:paddingVertical="40dp"
-    android:weightSum="5">
+    android:padding="20dp">
 
+    <!-- Heading Text -->
     <TextView
         android:id="@+id/helloHeadingText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/contact"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="30sp" />
 
+    <!-- Name Input Field -->
     <EditText
         android:id="@+id/helloFullNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="20dp"
-        android:autofillHints="name"
         android:hint="@string/yourName"
         android:inputType="text"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
+        android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        android:textCursorDrawable="@null" />
 
+    <!-- Button Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,27 +40,37 @@
 
         <Button
             android:id="@+id/unit2helloCancelBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/teal_200"
-            android:stateListAnimator="@null"
+            android:layout_weight="1"
+            android:background="@color/teal_200"
             android:text="@string/btn1"
             android:textAllCaps="false"
             android:textColor="@color/white" />
 
         <Space
-            android:layout_width="5dp"
+            android:layout_width="10dp"
             android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/unit2helloSubmitBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
-            android:stateListAnimator="@null"
+            android:layout_weight="1"
+            android:background="@color/black"
             android:text="@string/btn2"
             android:textColor="@color/white" />
-
     </LinearLayout>
+
+    <!-- New Button Centered -->
+    <Button
+        android:id="@+id/unit2NewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/black"
+        android:text="New Btn"
+        android:textColor="@color/white" />
 
 </LinearLayout>

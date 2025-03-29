@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imagesRoot"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".unit_5.ImageFragmentActivity" >
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/imageTopContainer"
+        android:name="com.bca.mobile_programming.unit_5.Fragment_one"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:layout = "@layout/unit_5_fragment_one" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/imageMiddleContainer"
+        android:name="com.bca.mobile_programming.unit_5.Fragment_two"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        tools:layout = "@layout/unit_5_fragment_two" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/imageBottomContainer"
+        android:name="com.bca.mobile_programming.unit_5.Fragment_one"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:layout = "@layout/unit_5_fragment_one" />
+
+
+</LinearLayout>
