@@ -23,7 +23,7 @@
     <string name="football">FootBall</string>
     <string name="volleyball">VolleyBall</string>
     <string name="basketball">BasketBall</string>
-    <string name="batmintion">Batmintion</string>
+    <string name="badminton">Badminton</string>
     <string name="maleText">Male</string>
     <string name="female">Female</string>
     <string name="image1">Image text</string>
@@ -37,7 +37,18 @@
     <string name="sports">Sports</string>
     <string name="go_back">GO back</string>
     <string name="dialog">Dialog</string>
-        <string name="name">Name</string>
+    <string name="name">Name</string>
+    <string name="welcome">Welcome</string>
+    <string name="headphone_image">headphone_image</string>
+    <string name="activity">Activity</string>
+    <string name="images">Image</string>
+    <string name="star_emoji">⭐</string>
+    <string name="switcher">Switcher</string>
+    <string name="fragment_one">Fragment One</string>
+    <string name="cross">❌</string>
+    <string name="fragment_two">Fragment Two</string>
+    <string name="pageNotFound">Page Not Found</string>
+    <string name="logo">Logo</string>
 
     <string-array name="country_list">
         <item>Nepal</item>

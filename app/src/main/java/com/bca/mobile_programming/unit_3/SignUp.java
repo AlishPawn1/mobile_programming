@@ -19,6 +19,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bca.mobile_programming.R;
+import com.bca.mobile_programming.unit_2.Hello;
 import com.bca.mobile_programming.unit_4.About;
 import com.bca.mobile_programming.unit_4.Contact;
 
@@ -114,7 +115,7 @@ public class SignUp extends AppCompatActivity {
         });
 
         aboutButton.setOnClickListener(v -> {
-            Intent i = new Intent(SignUp.this, Contact.class);
+            Intent i = new Intent(SignUp.this, Hello.class);
             contactLauncher.launch(i);
         });
 

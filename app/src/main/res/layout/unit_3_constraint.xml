@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="@color/purple_500"
-                android:text="@string/batmintion"
+                android:text="@string/badminton"
                 />
 
         </LinearLayout>

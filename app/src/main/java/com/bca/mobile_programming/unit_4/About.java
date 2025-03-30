@@ -49,6 +49,14 @@ public class About extends Activity {
             sportsText.setText("N/A");
         }
 
+        goBackBtn.setOnClickListener(v-> {
+            finish();
+        });
+
+        dialogBtn.setOnClickListener(v-> {
+            Toast.makeText(getApplicationContext(), "Dialog button is click", Toast.LENGTH_SHORT).show();
+        });
+
     }
 
 
