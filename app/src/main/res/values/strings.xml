@@ -50,6 +50,17 @@
     <string name="pageNotFound">Page Not Found</string>
     <string name="logo">Logo</string>
 
+    <string name="home">Home</string>
+
+    <string name="list_view">List View</string>
+    <string name="custom_list_view">Custom List View</string>
+    <string name="grid_view">Grid View</string>
+    <string name="recycle_list_view">Recycle List View</string>
+    <string name="logout">Logout</string>
+    <string name="setting">Setting</string>
+
+
+
     <string-array name="country_list">
         <item>Nepal</item>
         <item>China</item>
