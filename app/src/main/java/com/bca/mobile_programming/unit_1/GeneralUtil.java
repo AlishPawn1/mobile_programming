@@ -9,6 +9,7 @@ public class GeneralUtil {
     private static final int LIGHT_TEAL = 0xFFE9FFF7;
     private static final int LIGHT_PINK = 0xFF2AEF3;
 
+
     public static void showMySnack(View rootLayout, String message, String closeMessage){
         Snackbar snackbar = Snackbar.make(rootLayout, message, Snackbar.LENGTH_LONG);
         snackbar.setTextColor(LIGHT_TEAL);
