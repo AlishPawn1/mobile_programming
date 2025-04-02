@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/appOptionsListView"
+        android:title="@string/list_view"/>
+
+    <item
+        android:id="@+id/appOptionsCustomListView"
+        android:title="@string/custom_list_view"/>
+
+    <item
+        android:id="@+id/appOptionsGridView"
+        android:title="@string/grid_view"/>
+
+    <item
+        android:id="@+id/appOptionsRecycleListView"
+        android:title="@string/recycle_list_view"/>
+
+    <item
+        android:id="@+id/appOptionsLogout"
+        android:title="@string/logout"/>
+
+    <item
+        android:id="@+id/appOptionsSetting"
+        android:title="@string/setting"/>
+</menu>
