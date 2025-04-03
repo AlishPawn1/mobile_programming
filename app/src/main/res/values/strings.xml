@@ -58,8 +58,13 @@
     <string name="recycle_list_view">Recycle List View</string>
     <string name="logout">Logout</string>
     <string name="setting">Setting</string>
-
-
+    <string name="services">Services</string>
+    <string name="profile_service">Profile Service</string>
+    <string name="map">Map</string>
+    <string name="not_interested">Not Interested</string>
+    <string name="show_less">Show Less</string>
+    <string name="details">Details</string>
+    <string name="delete">Delete</string>
 
     <string-array name="country_list">
         <item>Nepal</item>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/popupOptionServices"
+        android:title="@string/services"/>
+
+    <item
+        android:id="@+id/popupOptionProfile"
+        android:title="@string/profile"/>
+
+    <item
+        android:id="@+id/popupOptionProfileService"
+        android:title="@string/profile_service"/>
+
+    <item
+        android:id="@+id/popupOptionMap"
+        android:title="@string/map"/>
+</menu>
