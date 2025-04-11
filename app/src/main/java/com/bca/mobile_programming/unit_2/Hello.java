@@ -25,11 +25,7 @@ public class Hello extends Activity {
         EditText fullNameInput = findViewById(R.id.helloFullNameInput);
         Button submitButton = findViewById(R.id.unit2helloSubmitBtn);
         Button cancelButton = findViewById(R.id.unit2helloCancelBtn);
-        Button newButton = findViewById(R.id.unit2NewButton);
 
-        newButton.setOnClickListener(v -> {
-            Toast.makeText(getApplicationContext(), "Button Click", Toast.LENGTH_SHORT).show();
-        });
 
         // Submit Button Click Listener
         submitButton.setOnClickListener(v -> {
@@ -63,39 +59,4 @@ public class Hello extends Activity {
         });
     }
 
-    @Override
-    protected void onStart(){
-        super.onStart();
-        Log.d("myStateLog", "Hello - onStart");
-    }
-
-    @Override
-    protected void onResume(){
-        super.onResume();
-        Log.d("myStateLog", "Hello - onResume");
-    }
-
-    @Override
-    protected void onRestart(){
-        super.onRestart();
-        Log.d("myStateLog", "Hello - onRestart");
-    }
-
-    @Override
-    protected void onPause(){
-        super.onPause();
-        Log.d("myStateLog", "Hello - onPause");
-    }
-
-    @Override
-    protected void onStop(){
-        super.onStop();
-        Log.d("myStateLog", "Hello - onStop");
-    }
-
-    @Override
-    protected void onDestroy(){
-        super.onDestroy();
-        Log.d("myStateLog", "Hello - onDestroy");
-    }
 }

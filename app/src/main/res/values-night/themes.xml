@@ -13,4 +13,13 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!--  Custom style for activity as a dialog  -->
+    <style name="ActivityAsDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">60%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+    
 </resources>

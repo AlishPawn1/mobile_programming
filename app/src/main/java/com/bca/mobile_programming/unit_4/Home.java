@@ -1,6 +1,5 @@
 package com.bca.mobile_programming.unit_4;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -17,7 +16,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
@@ -27,10 +25,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.bca.mobile_programming.R;
+import com.bca.mobile_programming.unit_1.AlertUtil;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
 import com.bca.mobile_programming.unit_5.FragmentSwitchActivity;
+import com.bca.mobile_programming.unit_5.GridView;
 import com.bca.mobile_programming.unit_5.ImageFragmentActivity;
-import com.bca.mobile_programming.unit_5.ListViewMain;
+import com.bca.mobile_programming.unit_6.CustomListViewMain;
+import com.bca.mobile_programming.unit_6.ListViewMain;
+import com.bca.mobile_programming.unit_6.Logout;
+import com.bca.mobile_programming.unit_6.RecycleListView;
+import com.bca.mobile_programming.unit_6.Setting;
 
 public class Home extends AppCompatActivity {
 
@@ -87,8 +91,23 @@ public class Home extends AppCompatActivity {
             startActivity(i);
         });
 
-        dialogButton.setOnClickListener(v-> {
-            Toast.makeText(getApplicationContext(), "Dialog button is click", Toast.LENGTH_SHORT).show();
+//        dialogButton.setOnClickListener(v-> {
+//            Toast.makeText(getApplicationContext(), "Dialog button is click", Toast.LENGTH_SHORT).show();
+//        });
+
+        activityButton.setOnClickListener(v -> {
+            Intent i = new Intent(Home.this, Contact.class);
+            startActivity(i);
+        });
+
+        dialogButton.setOnClickListener(v -> {
+            AlertUtil alert = new AlertUtil(this, rootLayout);
+            alert.show(getSupportFragmentManager(), "alert");
+        });
+
+        fragmentButtonImage.setOnClickListener(v -> {
+            Intent i = new Intent(Home.this, ImageFragmentActivity.class);
+            startActivity(i);
         });
 
         dashButton.setOnClickListener(V ->{
@@ -141,34 +160,34 @@ public class Home extends AppCompatActivity {
         int selectedItem = item.getItemId();
 
         if(selectedItem == R.id.appOptionsListView){
-//            Intent i = new Intent(Home.this, ListViewMain.class);
-//            startActivity(i);
+            Intent i = new Intent(Home.this, ListViewMain.class);
+            startActivity(i);
             Toast.makeText(this, "List View", Toast.LENGTH_SHORT).show();
             GeneralUtil.showMySnack(rootLayout, "this is list view ",  close);
             return true;
         } else if(selectedItem == R.id.appOptionsCustomListView){
-//            Intent i = new Intent(Home.this, CustomListViewMain.class);
-//            startActivity(i);
+            Intent i = new Intent(Home.this, CustomListViewMain.class);
+            startActivity(i);
             Toast.makeText(this, "Custom List View", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsGridView){
-//            Intent i = new Intent(Home.this, GridView.class);
-//            startActivity(i);
+            Intent i = new Intent(Home.this, GridView.class);
+            startActivity(i);
             Toast.makeText(this, "Grid View", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsRecycleListView){
-//            Intent i = new Intent(Home.this, RecycleListView.class);
-//            startActivity(i);
+            Intent i = new Intent(Home.this, RecycleListView.class);
+            startActivity(i);
             Toast.makeText(this, "Recycle List View", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsLogout){
-//            Intent i = new Intent(Home.this, Logout.class);
-//            startActivity(i);
+            Intent i = new Intent(Home.this, Logout.class);
+            startActivity(i);
             Toast.makeText(this, "Log Out", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsSetting){
-//            Intent i = new Intent(Home.this, Setting.class);
-//            startActivity(i);
+            Intent i = new Intent(Home.this, Setting.class);
+            startActivity(i);
             Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show();
             return true;
         }

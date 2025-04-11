@@ -7,7 +7,7 @@
     <string name="yourPassword">Enter your password</string>
     <string name="btn1">Cancel</string>
     <string name="btn2">Submit</string>
-    <string name="na">Text field is empty</string>
+    <string name="na">N/A</string>
     <string name="first_row">First row</string>
     <string name="second_row">Second row</string>
     <string name="third_row">Third row</string>
@@ -65,6 +65,16 @@
     <string name="show_less">Show Less</string>
     <string name="details">Details</string>
     <string name="delete">Delete</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="positive">Positive</string>
+    <string name="negative">Negative</string>
+    <string name="alert_title">This is alert title</string>
+    <string name="alert_message">This is alert message</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="choose">Choose</string>
+    <string name="list_item_title">List Item Title</string>
+    <string name="list_item_description">This is List Item Description where description is list list discription</string>
 
     <string-array name="country_list">
         <item>Nepal</item>
@@ -76,5 +86,30 @@
         <item>Korea</item>
     </string-array>
 
+    <string-array name="flower_names">
+        <item>Rose</item>
+        <item>Lily</item>
+        <item>Tulip</item>
+        <item>Daisy</item>
+        <item>Orchid</item>
+        <item>Sunflower</item>
+        <item>Marigold</item>
+        <item>Lavender</item>
+        <item>Peony</item>
+        <item>Chrysanthemum</item>
+    </string-array>
+
+    <string-array name="custom_description_list">
+        <item>Symbol of love and passion with a sweet fragrance.</item>
+        <item>Elegant and pure, often used in weddings and funerals.</item>
+        <item>Bright and cup-shaped, popular in spring gardens.</item>
+        <item>Cheerful flower symbolizing innocence and purity.</item>
+        <item>Exotic flower known for beauty and fragrance.</item>
+        <item>Large yellow bloom that follows the suns path.</item>
+        <item>Bright orange flower used in garlands and rituals.</item>
+        <item>Soothing purple flower known for its calming scent.</item>
+        <item>Large ruffled blooms often used in wedding bouquets.</item>
+        <item>Symbolizes longevity and happiness, widely used in Asia.</item>
+    </string-array>
 
 </resources>

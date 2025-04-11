@@ -62,15 +62,4 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-    <!-- New Button Centered -->
-    <Button
-        android:id="@+id/unit2NewButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/black"
-        android:text="New Btn"
-        android:textColor="@color/white" />
-
 </LinearLayout>
