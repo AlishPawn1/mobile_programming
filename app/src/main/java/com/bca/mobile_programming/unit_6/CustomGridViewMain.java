@@ -2,13 +2,10 @@ package com.bca.mobile_programming.unit_6;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 import android.widget.GridView;
 
 import androidx.annotation.Nullable;
@@ -18,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
 
-public class GridViewMain extends AppCompatActivity {
+public class CustomGridViewMain extends AppCompatActivity {
 
     @Override
     protected void onStart() {
@@ -38,22 +35,30 @@ public class GridViewMain extends AppCompatActivity {
         GridView gridView = findViewById(R.id.gridViewMainList);
         ViewGroup rootLayout = findViewById(R.id.gridViewMainRoot);
 
-        String[] flowerList = res.getStringArray(R.array.flower_names);
+        String[] titleList = res.getStringArray(R.array.flower_names);
+        String[] descriptionList = res.getStringArray(R.array.custom_description_list);
+        int[] imagesList = {
+                R.drawable.rose,
+                R.drawable.lily,
+                R.drawable.tulip,
+                R.drawable.daisy,
+                R.drawable.orchid,
+                R.drawable.sunflower,
+                R.drawable.marigold,
+                R.drawable.lavender,
+                R.drawable.peony,
+                R.drawable.ch
+        };
 
-        ArrayAdapter<String> flowerAdapter = new ArrayAdapter<>(
-                this,
-                R.layout.unit_3_spinner_item,
-                R.id.spinnerItemText,
-                flowerList
-        );
+        CustomGridItem customAdapter = new CustomGridItem(this, titleList, descriptionList, imagesList);
 
-        gridView.setAdapter(flowerAdapter);
+        gridView.setAdapter(customAdapter);
 
         gridView.setOnItemClickListener((list, v, position, id) -> {
             String close = "Okay";
             Adapter listAdapter = list.getAdapter();
             String value = listAdapter.getItem(position).toString();
-            String message = value + " at position " + position + " with id " + id;
+            String message = value + " at position " + (position + 1) + " with id " + id;
             GeneralUtil.showMySnack(rootLayout, message, close);
         });
     }

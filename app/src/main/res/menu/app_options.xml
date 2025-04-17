@@ -13,6 +13,10 @@
         android:title="@string/grid_view"/>
 
     <item
+        android:id="@+id/appOptionsCustomGridView"
+        android:title="@string/custom_grid_view"/>
+
+    <item
         android:id="@+id/appOptionsRecycleListView"
         android:title="@string/recycle_list_view"/>
 

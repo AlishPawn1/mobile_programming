@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/customGridItemRoot"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="20dp"
+    >
+
+    <ImageView
+        android:id="@+id/customGridItemImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/profile"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sign_image"/>
+
+    <TextView
+        android:id="@+id/customGridItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customGridItemImage"
+        android:layout_centerHorizontal="true"
+        android:text="@string/list_item_title"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:id="@+id/customGridItemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customGridItemTitle"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/list_item_description"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>

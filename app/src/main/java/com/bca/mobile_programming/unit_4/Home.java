@@ -28,9 +28,11 @@ import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_1.AlertUtil;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
 import com.bca.mobile_programming.unit_5.FragmentSwitchActivity;
-import com.bca.mobile_programming.unit_5.GridView;
+import com.bca.mobile_programming.unit_6.CustomGridViewMain;
+import com.bca.mobile_programming.unit_6.GridView;
 import com.bca.mobile_programming.unit_5.ImageFragmentActivity;
 import com.bca.mobile_programming.unit_6.CustomListViewMain;
+import com.bca.mobile_programming.unit_6.GridViewMain;
 import com.bca.mobile_programming.unit_6.ListViewMain;
 import com.bca.mobile_programming.unit_6.Logout;
 import com.bca.mobile_programming.unit_6.RecycleListView;
@@ -49,7 +51,7 @@ public class Home extends AppCompatActivity {
 
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.light_gray));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.blue_500));
 
         ActionBar bar = getSupportActionBar();
 
@@ -171,9 +173,14 @@ public class Home extends AppCompatActivity {
             Toast.makeText(this, "Custom List View", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsGridView){
-            Intent i = new Intent(Home.this, GridView.class);
+            Intent i = new Intent(Home.this, GridViewMain.class);
             startActivity(i);
-            Toast.makeText(this, "Grid View", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Grid View main", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if(selectedItem == R.id.appOptionsCustomGridView){
+            Intent i = new Intent(Home.this, CustomGridViewMain.class);
+            startActivity(i);
+            Toast.makeText(this, "Custom Grid View", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsRecycleListView){
             Intent i = new Intent(Home.this, RecycleListView.class);
@@ -181,13 +188,13 @@ public class Home extends AppCompatActivity {
             Toast.makeText(this, "Recycle List View", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsLogout){
-            Intent i = new Intent(Home.this, Logout.class);
-            startActivity(i);
+//            Intent i = new Intent(Home.this, Logout.class);
+//            startActivity(i);
             Toast.makeText(this, "Log Out", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsSetting){
-            Intent i = new Intent(Home.this, Setting.class);
-            startActivity(i);
+//            Intent i = new Intent(Home.this, Setting.class);
+//            startActivity(i);
             Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show();
             return true;
         }

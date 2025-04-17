@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/listViewMainRoot"
+    android:id="@+id/gridViewMainRoot"
     >
 
     <TextView
@@ -22,21 +22,15 @@
         android:background="@color/translucent_gray"
         />
 
-    <ListView
-        android:id="@+id/listViewMainList"
+    <GridView
+        android:id="@+id/gridViewMainList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:divider="@color/transparent_dark_teal"
-        android:dividerHeight="1dp"
-        android:footerDividersEnabled="false"
-        android:headerDividersEnabled="false"
-        android:overScrollFooter="@color/transparent"
-        android:overScrollHeader="@color/transparent"
-        android:paddingTop="40dp"
-        android:paddingBottom="80dp"
-        android:scrollbarStyle="outsideOverlay"
-        android:scrollbarThumbVertical="@color/blue_200"
-        />
+        android:horizontalSpacing="20dp"
+        android:numColumns="2"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="40dp"
+        android:verticalSpacing="10dp" />
 
 </LinearLayout>

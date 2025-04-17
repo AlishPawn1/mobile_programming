@@ -55,6 +55,7 @@
     <string name="list_view">List View</string>
     <string name="custom_list_view">Custom List View</string>
     <string name="grid_view">Grid View</string>
+    <string name="custom_grid_view">Custom Grid View</string>
     <string name="recycle_list_view">Recycle List View</string>
     <string name="logout">Logout</string>
     <string name="setting">Setting</string>
