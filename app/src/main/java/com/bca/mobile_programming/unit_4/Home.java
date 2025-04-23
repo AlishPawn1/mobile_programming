@@ -29,14 +29,11 @@ import com.bca.mobile_programming.unit_1.AlertUtil;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
 import com.bca.mobile_programming.unit_5.FragmentSwitchActivity;
 import com.bca.mobile_programming.unit_6.CustomGridViewMain;
-import com.bca.mobile_programming.unit_6.GridView;
 import com.bca.mobile_programming.unit_5.ImageFragmentActivity;
 import com.bca.mobile_programming.unit_6.CustomListViewMain;
 import com.bca.mobile_programming.unit_6.GridViewMain;
 import com.bca.mobile_programming.unit_6.ListViewMain;
-import com.bca.mobile_programming.unit_6.Logout;
-import com.bca.mobile_programming.unit_6.RecycleListView;
-import com.bca.mobile_programming.unit_6.Setting;
+import com.bca.mobile_programming.unit_6.RecycleListViewMain;
 
 public class Home extends AppCompatActivity {
 
@@ -183,7 +180,7 @@ public class Home extends AppCompatActivity {
             Toast.makeText(this, "Custom Grid View", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsRecycleListView){
-            Intent i = new Intent(Home.this, RecycleListView.class);
+            Intent i = new Intent(Home.this, RecycleListViewMain.class);
             startActivity(i);
             Toast.makeText(this, "Recycle List View", Toast.LENGTH_SHORT).show();
             return true;

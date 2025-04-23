@@ -113,4 +113,17 @@
         <item>Symbolizes longevity and happiness, widely used in Asia.</item>
     </string-array>
 
+    <string-array name="flower_image">
+        <item>@drawable/rose</item>
+        <item>@drawable/lily</item>
+        <item>@drawable/tulip</item>
+        <item>@drawable/daisy</item>
+        <item>@drawable/orchid</item>
+        <item>@drawable/sunflower</item>
+        <item>@drawable/marigold</item>
+        <item>@drawable/lavender</item>
+        <item>@drawable/peony</item>
+        <item>@drawable/ch</item>
+    </string-array>
+
 </resources>
