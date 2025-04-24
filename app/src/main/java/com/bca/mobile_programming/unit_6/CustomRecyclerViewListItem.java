@@ -28,7 +28,7 @@ public class CustomRecyclerViewListItem extends RecyclerView.Adapter<RecycleItem
     public RecycleItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(ctx);
         View listItem = layoutInflater.inflate(R.layout.unit_6_custom_list_item, parent, false);
-        return new RecycleItemHolder(listItem, R.id.customListItemRoot, R.id.customListItemTitle, R.id.customListItemTitle, R.id.customListItemDescription);
+        return new RecycleItemHolder(listItem, R.id.customListItemRoot, R.id.customListItemTitle, R.id.customListItemImage, R.id.customListItemDescription);
     }
 
     @Override
@@ -45,7 +45,7 @@ public class CustomRecyclerViewListItem extends RecyclerView.Adapter<RecycleItem
         holder.descriptionView.setText(albumDetail.getDescription());
 
         holder.rootView.setOnClickListener(v ->{
-            String close = "Begon";
+            String close = "Begone";
             String message = albumDetail.getTitle();
             GeneralUtil.showMySnack(holder.rootView, message, close);
         });

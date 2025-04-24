@@ -5,6 +5,7 @@
     <string name="yourEmail">Enter your email</string>
     <string name="yourPhone">Enter your phone</string>
     <string name="yourPassword">Enter your password</string>
+    <string name="yourAddress">Enter your Address</string>
     <string name="btn1">Cancel</string>
     <string name="btn2">Submit</string>
     <string name="na">N/A</string>

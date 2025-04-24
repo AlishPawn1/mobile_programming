@@ -33,7 +33,7 @@ import com.bca.mobile_programming.unit_5.ImageFragmentActivity;
 import com.bca.mobile_programming.unit_6.CustomListViewMain;
 import com.bca.mobile_programming.unit_6.GridViewMain;
 import com.bca.mobile_programming.unit_6.ListViewMain;
-import com.bca.mobile_programming.unit_6.RecycleListViewMain;
+import com.bca.mobile_programming.unit_6.RecyclerViewListMain;
 
 public class Home extends AppCompatActivity {
 
@@ -180,7 +180,7 @@ public class Home extends AppCompatActivity {
             Toast.makeText(this, "Custom Grid View", Toast.LENGTH_SHORT).show();
             return true;
         } else if(selectedItem == R.id.appOptionsRecycleListView){
-            Intent i = new Intent(Home.this, RecycleListViewMain.class);
+            Intent i = new Intent(Home.this, RecyclerViewListMain.class);
             startActivity(i);
             Toast.makeText(this, "Recycle List View", Toast.LENGTH_SHORT).show();
             return true;

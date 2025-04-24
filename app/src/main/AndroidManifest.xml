@@ -39,6 +39,7 @@
         <activity android:name=".unit_6.CustomListViewMain"/>
         <activity android:name=".unit_6.GridViewMain"/>
         <activity android:name=".unit_6.CustomGridViewMain"/>
+        <activity android:name=".unit_6.RecyclerViewListMain"/>
 
     </application>
 

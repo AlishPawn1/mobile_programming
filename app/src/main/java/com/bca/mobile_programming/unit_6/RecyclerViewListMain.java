@@ -50,5 +50,9 @@ public class RecyclerViewListMain extends AppCompatActivity {
         RecyclerView.LayoutManager layout = new LinearLayoutManager(this);
 
         recyclerView.setLayoutManager(layout);
+
+        CustomRecyclerViewListItem itemList = new CustomRecyclerViewListItem(this, albumDetails);
+
+        recyclerView.setAdapter(itemList);
     }
 }
