@@ -34,6 +34,7 @@ import com.bca.mobile_programming.unit_6.CustomListViewMain;
 import com.bca.mobile_programming.unit_6.GridViewMain;
 import com.bca.mobile_programming.unit_6.ListViewMain;
 import com.bca.mobile_programming.unit_6.RecyclerViewListMain;
+import com.bca.mobile_programming.unit_7.UserProfileMain;
 
 public class Home extends AppCompatActivity {
 
@@ -137,7 +138,13 @@ public class Home extends AppCompatActivity {
 //                    startActivity(i);
                     GeneralUtil.showMySnack(rootLayout, "Map", close);
                     return true;
+                } else if(selectedItem == R.id.popupOptionUserProfileMain){
+                    Intent i = new Intent(Home.this, UserProfileMain.class);
+                    startActivity(i);
+                    GeneralUtil.showMySnack(rootLayout, "User Profile", close);
+                    return true;
                 }
+
 
                 return false;
             });

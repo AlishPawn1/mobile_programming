@@ -16,4 +16,8 @@
     <item
         android:id="@+id/popupOptionMap"
         android:title="@string/map"/>
+
+    <item
+        android:id="@+id/popupOptionUserProfileMain"
+        android:title="@string/user_profile_main"/>
 </menu>

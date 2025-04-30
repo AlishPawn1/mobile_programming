@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">mobile_programming</string>
     <string name="contact">Contact: </string>
+    <string name="yourId">Id</string>
     <string name="yourName">Enter your name</string>
     <string name="yourEmail">Enter your email</string>
     <string name="yourPhone">Enter your phone</string>
@@ -77,6 +78,16 @@
     <string name="choose">Choose</string>
     <string name="list_item_title">List Item Title</string>
     <string name="list_item_description">This is List Item Description where description is list list discription</string>
+
+    <string name="profile_details_server">Profile Details Server</string>
+    <string name="data_from_server">Data From Server</string>
+    <string name="refresh">Refresh</string>
+    <string name="insert">Insert</string>
+    <string name="profile_details">Profile Details</string>
+    <string name="select">Select</string>
+    <string name="update">Update</string>
+    <string name="data_from_db">Data From Db</string>
+    <string name="user_profile_main">User profile Main</string>
 
     <string-array name="country_list">
         <item>Nepal</item>

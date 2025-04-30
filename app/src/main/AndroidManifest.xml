@@ -40,6 +40,7 @@
         <activity android:name=".unit_6.GridViewMain"/>
         <activity android:name=".unit_6.CustomGridViewMain"/>
         <activity android:name=".unit_6.RecyclerViewListMain"/>
+        <activity android:name=".unit_7.UserProfileMain"/>
 
     </application>
 
