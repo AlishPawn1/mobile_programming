@@ -88,6 +88,8 @@
     <string name="update">Update</string>
     <string name="data_from_db">Data From Db</string>
     <string name="user_profile_main">User profile Main</string>
+    <string name="map_description">map description</string>
+    <string name="map_title">This is map title</string>
 
     <string-array name="country_list">
         <item>Nepal</item>

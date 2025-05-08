@@ -34,7 +34,9 @@ import com.bca.mobile_programming.unit_6.CustomListViewMain;
 import com.bca.mobile_programming.unit_6.GridViewMain;
 import com.bca.mobile_programming.unit_6.ListViewMain;
 import com.bca.mobile_programming.unit_6.RecyclerViewListMain;
+import com.bca.mobile_programming.unit_7.MapViewMain;
 import com.bca.mobile_programming.unit_7.UserProfileMain;
+import com.bca.mobile_programming.unit_7.UserProfileServerMain;
 
 public class Home extends AppCompatActivity {
 
@@ -45,7 +47,7 @@ public class Home extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        //        setting color of status bar
+        // setting color of status bar
 
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -129,13 +131,13 @@ public class Home extends AppCompatActivity {
                     GeneralUtil.showMySnack(rootLayout, "Service", close);
                     return true;
                 } else if(selectedItem == R.id.popupOptionProfileService){
-//                    Intent i = new Intent(Home.this, UserProfileService.class);
-//                    startActivity(i);
+                    Intent i = new Intent(Home.this, UserProfileServerMain.class);
+                    startActivity(i);
                     GeneralUtil.showMySnack(rootLayout, "Profile Service", close);
                     return true;
                 } else if(selectedItem == R.id.popupOptionMap){
-//                    Intent i = new Intent(Home.this, UserMap.class);
-//                    startActivity(i);
+                    Intent i = new Intent(Home.this, MapViewMain.class);
+                    startActivity(i);
                     GeneralUtil.showMySnack(rootLayout, "Map", close);
                     return true;
                 } else if(selectedItem == R.id.popupOptionUserProfileMain){

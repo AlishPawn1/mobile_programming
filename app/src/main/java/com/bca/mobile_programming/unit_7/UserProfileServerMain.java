@@ -18,6 +18,11 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bca.mobile_programming.R;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UserProfileServerMain extends AppCompatActivity {
@@ -27,8 +32,8 @@ public class UserProfileServerMain extends AppCompatActivity {
     EditText nameInput;
     EditText addressInput;
 
-    final String getEndpoint = "http://192.168.16.106/getdata.php";
-    final String sendEndpoint = "http://192.168.16.106/setdata.php";
+    final String getEndpoint = "http://192.168.16.132/getdata.php";
+    final String sendEndpoint = "http://192.168.16.132/setdata.php";
 
     @Override
     protected void onStart() {
@@ -77,11 +82,43 @@ public class UserProfileServerMain extends AppCompatActivity {
         };
 
         query.add(stringRequest);
+    }
 
+    private void decodeJson(String response){
+        try{
+            ArrayList<UserInfo> data = new ArrayList<>();
+            JSONObject result  = new JSONObject(response);
+            JSONArray array = result.getJSONArray("data");
+
+            for (int i = 0; i < array.length(); i++){
+                JSONObject student = array.getJSONObject(i);
+
+                int id = student.getInt("id");
+                String name = student.getString("name");
+                String address = student.getString("address");
+
+                UserInfo dataModel = new UserInfo(id, name, address);
+
+                data.add(dataModel);
+            }
+
+            UserListItemAdapter adapter = new UserListItemAdapter(UserProfileServerMain.this, data);
+
+            mainList.setAdapter(adapter);
+        } catch (Exception e) {
+            Log.d("decode json error", e.toString());
+        }
     }
 
     private void getUserData(){
-//        RequestQueue query = Volley.newRequestQueue(this);
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST,getEndPoint);
+        RequestQueue query = Volley.newRequestQueue(this);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET,getEndpoint,
+                response -> {
+                    Log.d("response", response);
+                    decodeJson(response);
+                },
+                error -> Log.d("error getting data", error.toString())
+        );
+        query.add(stringRequest);
     }
 }
